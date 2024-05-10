@@ -14,7 +14,7 @@ export const theme = createTheme({
     AppShell: AppShell.extend({
       defaultProps: {
         bg: '#FFF7E9',
-        c:'red'
+        c:'text-color'
       }
     }),
     Text: Text.extend({

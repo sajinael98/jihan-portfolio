@@ -16,3 +16,5 @@ export const links = [
         herf: 'journey'
     }
 ] as const
+
+export const certifications = ['/certified/gaza.svg', '/certified/KA.png', '/certified/ixdf.png',] as const

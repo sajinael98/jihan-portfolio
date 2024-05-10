@@ -7,7 +7,7 @@ import { useDisclosure } from '@mantine/hooks'
 import { useTypewriter } from 'react-simple-typewriter'
 import PrimaryButton from '../PrimaryButton'
 
-const PADDING_INLINE = { base: 'calc(var(--mantine-spacing-sm) * 3)', lg: 'calc(var(--mantine-spacing-md) * 10)' }
+const PADDING_INLINE = { base: 'calc(var(--mantine-spacing-sm) * 1.5)', lg: 'calc(var(--mantine-spacing-md) * 10)' }
 
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
     const [opened, { toggle }] = useDisclosure(false)
