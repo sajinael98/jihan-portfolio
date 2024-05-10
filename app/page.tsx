@@ -9,7 +9,7 @@ import Certifications from './components/Certifications';
 
 export default function HomePage() {
   return (
-    <Stack py={'calc(var(--mantine-spacing-md) * 4)'}>
+    <Stack gap={'calc(var(--mantine-spacing-md) * 6)'} py={'calc(var(--mantine-spacing-md) * 4)'}>
       <Section title='Certified by' subtitle='Credentials and Achievements'>
         <Certifications />
       </Section>
