@@ -9,17 +9,17 @@ const Section = ({ children, title, subtitle }: PropsWithChildren<SectionProps>)
             <Stack gap={0}>
                 <Text
                     ta='center'
-                    style={{ letterSpacing: 3, fontWeight: 600, textTransform: 'uppercase', lineHeight: 1 }}
-                    fz={{ base: 'calc(var(--mantine-font-size-sm) * 2)', lg: 'calc(var(--mantine-font-size-md) * 1.5)' }}
+                    style={{ letterSpacing: 3, fontWeight: 600, textTransform: 'uppercase', lineHeight: 1.5 }}
+                    fz={{ base: 'calc(var(--mantine-font-size-sm) * 1.25)', lg: 'calc(var(--mantine-font-size-md) * 1.5)' }}
 
                 >
                     {title}
                 </Text>
                 <Text
-                    style={{ lineHeight: 1 }}
+                    style={{ lineHeight: 1.5 }}
                     ta='center'
                     fw={700}
-                    fz={{ base: 'calc(var(--mantine-font-size-sm) * 2)', lg: 'calc(var(--mantine-font-size-md) * 4)' }}
+                    fz={{ base: 'calc(var(--mantine-font-size-sm) * 2)', lg: 'calc(var(--mantine-font-size-md) * 3)' }}
                 >{subtitle}</Text>
                 <Center mt='md'>
                     <Dots />

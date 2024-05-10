@@ -6,6 +6,7 @@ import { useWindowScroll } from '@mantine/hooks';
 import AboutMe from './components/AboutMe';
 import Section from './components/Section';
 import Certifications from './components/Certifications';
+import { ServicesList } from './modules/services/presentation';
 
 export default function HomePage() {
   return (
@@ -16,6 +17,9 @@ export default function HomePage() {
       <Box>
         <AboutMe />
       </Box>
+      <Section title='Services' subtitle='How I can help ?'>
+        <ServicesList />
+      </Section>
     </Stack>
   );
 }
