@@ -42,7 +42,7 @@ const ServiceCard = ({ index, service }: ServiceCardProps) => {
                 <Image src={service.icon} alt={service.title} fill priority />
             </Box>
             <Text fw={600} fz={{ base: 'calc(var(--mantine-font-size-sm) * 2)', lg: 'calc(var(--mantine-font-size-md) * 1.5)' }}>{service.title}</Text>
-            <Text w={200}>{service.description}</Text>
+            <Text w={210}>{service.description}</Text>
         </Paper>
     )
 }
