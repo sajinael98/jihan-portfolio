@@ -7,6 +7,7 @@ import AboutMe from './components/AboutMe';
 import Section from './components/Section';
 import Certifications from './components/Certifications';
 import { ServicesList } from './modules/services/presentation';
+import { ProjectsList } from './modules/projects/presentation';
 
 export default function HomePage() {
   return (
@@ -19,6 +20,9 @@ export default function HomePage() {
       </Box>
       <Section title='Services' subtitle='How I can help ?'>
         <ServicesList />
+      </Section>
+      <Section title='Projects' subtitle='A look at portfolio'>
+        <ProjectsList />
       </Section>
     </Stack>
   );

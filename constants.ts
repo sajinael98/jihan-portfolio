@@ -1,3 +1,4 @@
+import { Project } from "./app/modules/projects/types"
 import { Service } from "./app/modules/services/types"
 
 export const links = [
@@ -44,4 +45,25 @@ export const services: Service[] = [
         description
     },
 
+] as const
+
+export const categories = ["Web UI", "Mobile UI", "Social Media ADs", "Logo & Branding"] as const
+
+export const projects: Project[] = [
+    {
+        title: 'Food Mobile App',
+        image: '/portfolio/image1.jpg'
+    },
+    {
+        title: 'Maps App',
+        image: '/portfolio/image2.jpg'
+    },
+    {
+        title: 'Restaurant Web',
+        image: '/portfolio/image3.jpg'
+    },
+    {
+        title: 'Store Social Media ADs',
+        image: '/portfolio/image4.jpg'
+    },
 ] as const
