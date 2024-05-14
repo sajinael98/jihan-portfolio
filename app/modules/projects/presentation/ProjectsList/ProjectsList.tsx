@@ -40,13 +40,12 @@ const ProjectsList = () => {
 
     return (
         <Tabs defaultValue='all' keepMounted={false} variant='default'>
-            <Tabs.List justify="space-between">
+            <Tabs.List justify="space-between" mb='calc(var(--mantine-spacing-md) * 2)'>
                 {options.map((opt) => <Tabs.Tab key={opt} tt='capitalize' onClick={() => setOption(opt)} value={opt} style={{ opacity: option === opt ? 1 : 0.25 }}>
                     {opt}
                 </Tabs.Tab>)}
             </Tabs.List>
-
-            <Tabs.Panel value="all" py='calc(var(--mantine-spacing-md) * 3)'>
+            <Tabs.Panel value="all">
                 <Grid grow gutter="md">
                     <GridCol index={0} span={{ base: 12, xs: 8 }}>
                         <ProjectCard project={projects[0]} />

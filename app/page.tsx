@@ -12,7 +12,7 @@ import Summary from './components/Summary';
 
 export default function HomePage() {
   return (
-    <Stack gap={'calc(var(--mantine-spacing-md) * 6)'} py={'calc(var(--mantine-spacing-md) * 4)'}>
+    <Stack gap={'calc(var(--mantine-spacing-md) * 4)'} py={'calc(var(--mantine-spacing-md) * 2)'}>
       <Section title='Certified by' subtitle='Credentials and Achievements'>
         <Certifications />
       </Section>
