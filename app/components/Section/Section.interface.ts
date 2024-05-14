@@ -1,4 +1,4 @@
 export interface SectionProps {
-    title: string
+    title?: string
     subtitle?: string
 }

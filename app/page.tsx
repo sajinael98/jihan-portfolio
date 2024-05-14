@@ -8,6 +8,7 @@ import Section from './components/Section';
 import Certifications from './components/Certifications';
 import { ServicesList } from './modules/services/presentation';
 import { ProjectsList } from './modules/projects/presentation';
+import Summary from './components/Summary';
 
 export default function HomePage() {
   return (
@@ -23,6 +24,9 @@ export default function HomePage() {
       </Section>
       <Section title='Projects' subtitle='A look at portfolio'>
         <ProjectsList />
+      </Section>
+      <Section>
+        <Summary />
       </Section>
     </Stack>
   );
