@@ -28,7 +28,9 @@ export const theme = createTheme({
         c: 'text-color',
         w: 132,
         h: 48,
-        radius: 12
+        radius: 12,
+        fw:700,
+        fz: 'md'
       }
     })
   }

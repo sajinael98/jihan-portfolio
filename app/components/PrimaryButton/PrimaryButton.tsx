@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-import { useProps, MantineThemeProvider, createTheme, Button, ButtonProps } from '@mantine/core';
+import { Button, ButtonProps, useProps } from '@mantine/core';
 
 interface PrimaryButtonProps extends ButtonProps {
     children?: React.ReactNode;
 }
 
 const defaultProps: Partial<PrimaryButtonProps> = {
-
+    
 };
 
 
@@ -15,7 +15,7 @@ const PrimaryButton = (props: PrimaryButtonProps) => {
     const { children, ...buttonProps } = useProps('PrimaryButton', defaultProps, props);
 
     return (
-        <Button {...buttonProps}>
+        <Button  {...buttonProps} >
             {children}
         </Button>
     )

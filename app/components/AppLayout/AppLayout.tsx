@@ -87,7 +87,7 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
                                 <Image src='/arrow.svg' alt="hero image" width={120} height={100} priority />
                             </Group>
                         </Flex>
-                        <Flex flex={{ base: 0, lg: 1 }} h={300} pos='relative'>
+                        <Flex flex={{ base: 0, lg: 1 }} h={{base: 300, lg: '100%'}} pos='relative'>
                             <Image src='/heroPic(svg).svg' alt="hero image" fill priority />
                         </Flex>
                     </Flex>

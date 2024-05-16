@@ -1,14 +1,12 @@
 "use client"
-import React, { useState, useEffect } from 'react';
 import { Box, Stack, } from '@mantine/core';
-import { motion } from 'framer-motion';
-import { useWindowScroll } from '@mantine/hooks';
 import AboutMe from './components/AboutMe';
-import Section from './components/Section';
 import Certifications from './components/Certifications';
-import { ServicesList } from './modules/services/presentation';
-import { ProjectsList } from './modules/projects/presentation';
+import Section from './components/Section';
 import Summary from './components/Summary';
+import { Contact } from './modules/contact/presentation';
+import { ProjectsList } from './modules/projects/presentation';
+import { ServicesList } from './modules/services/presentation';
 
 export default function HomePage() {
   return (
@@ -27,6 +25,9 @@ export default function HomePage() {
       </Section>
       <Section>
         <Summary />
+      </Section>
+      <Section>
+        <Contact />
       </Section>
     </Stack>
   );
