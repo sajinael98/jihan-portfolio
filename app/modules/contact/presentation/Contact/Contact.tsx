@@ -3,6 +3,7 @@ import React from 'react'
 import PrimaryButton from '../../../../components/PrimaryButton'
 import Image from 'next/image'
 import Dots from '../../../../components/Dots'
+import Title from '../../../../components/Title'
 
 const Contact = () => {
   return (
@@ -24,12 +25,10 @@ const Contact = () => {
         >
           How I do it ?
         </Text>
-        <Text
-          fw={700}
-          fz={{ base: 'calc(var(--mantine-font-size-sm) * 2)', lg: 'calc(var(--mantine-font-size-md) * 3)' }}
+        <Title
           w={{ base: 250, lg: 420 }}>
           Get In Touch
-        </Text>
+        </Title>
         <Text fw={400}>Lorem ipsum dolor sit amet, consectetur </Text>
         <PrimaryButton w={200} mt={'md'}>
           Send me an email

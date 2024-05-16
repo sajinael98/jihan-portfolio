@@ -2,6 +2,7 @@ import { Box, Flex, Group, Stack, Text, Image } from '@mantine/core'
 import React from 'react'
 import Dots from '../Dots'
 import NImage from 'next/image'
+import Title from '../Title'
 
 const Summary = () => {
   return (
@@ -18,13 +19,9 @@ const Summary = () => {
         >
           How I do it ?
         </Text>
-        <Text
-          style={{ lineHeight: 1.5 }}
-          fw={700}
-          fz={{ base: 'calc(var(--mantine-font-size-sm) * 2)', lg: 'calc(var(--mantine-font-size-md) * 3)' }}
-        > Bringing Idea to
-          <br />life
-        </Text>
+        <Title> Bringing Idea to
+          <Text inherit>life</Text>
+        </Title>
         <Dots />
 
         {['cyan.8', 'yellow.6', 'orange.8'].map(c => <Group key={c}>

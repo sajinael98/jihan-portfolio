@@ -2,6 +2,7 @@ import { Box, Flex, Stack, Text, Image } from '@mantine/core'
 import React from 'react'
 import Dots from '../Dots'
 import NImage from 'next/image'
+import Title from '../Title'
 
 const AboutMe = () => {
     return (
@@ -24,12 +25,9 @@ const AboutMe = () => {
         >
             <Stack flex={1} gap={0}>
                 <Text style={{ letterSpacing: 3, fontWeight: 600, textTransform: 'uppercase' }}>about me</Text>
-                <Text
-                    fw={700}
-                    fz={{ base: 'calc(var(--mantine-font-size-sm) * 2)', lg: 'calc(var(--mantine-font-size-md) * 3.5)' }}
-                >
+                <Title>
                     Design your ideas
-                </Text>
+                </Title>
                 <Dots />
                 <Text mt={'calc(var(--mantine-spacing-md) * 2)'} mr={{ lg: 50 }}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.

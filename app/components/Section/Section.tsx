@@ -2,6 +2,7 @@ import React, { PropsWithChildren } from 'react'
 import { SectionProps } from './Section.interface'
 import { Box, Center, Divider, Stack, Text } from '@mantine/core'
 import Dots from '../Dots'
+import Title from '../Title'
 
 const Section = ({ children, title, subtitle }: PropsWithChildren<SectionProps>) => {
     return (
@@ -16,12 +17,7 @@ const Section = ({ children, title, subtitle }: PropsWithChildren<SectionProps>)
                     >
                         {title}
                     </Text>}
-                    {subtitle && <Text
-                        style={{ lineHeight: 1.5 }}
-                        ta='center'
-                        fw={700}
-                        fz={{ base: 'calc(var(--mantine-font-size-sm) * 2)', lg: 'calc(var(--mantine-font-size-md) * 3)' }}
-                    >{subtitle}</Text>}
+                    {subtitle && <Title ta='center'>{subtitle}</Title>}
                     <Center mt='md'>
                         <Dots />
                     </Center>
@@ -30,7 +26,7 @@ const Section = ({ children, title, subtitle }: PropsWithChildren<SectionProps>)
                     {children}
                 </Box>
             </Stack>
-            <Divider  color='#F3D1BF' size='md' style={{ opacity: 0.5 }} />
+            <Divider color='#F3D1BF' size='md' style={{ opacity: 0.5 }} />
         </>
     )
 }

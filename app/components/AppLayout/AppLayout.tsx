@@ -6,6 +6,7 @@ import { links } from '../../../constants'
 import { useDisclosure } from '@mantine/hooks'
 import { useTypewriter } from 'react-simple-typewriter'
 import PrimaryButton from '../PrimaryButton'
+import Title from '../Title'
 
 const PADDING_INLINE = { base: 'calc(var(--mantine-spacing-sm) * 1.5)', lg: 'calc(var(--mantine-spacing-md) * 10)' }
 
@@ -69,13 +70,11 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
                                 gradient={{ deg: 90, from: '#F0B13F', to: '#96815C' }}>
                                 Hi There !
                             </Text>
-                            <Text
+                            <Title
                                 h={{ base: 80, lg: 130 }}
-                                fw={700}
-                                fz={{ base: 'calc(var(--mantine-font-size-sm) * 2)', lg: 'calc(var(--mantine-font-size-md) * 3)' }}
                                 w={{ base: 250, lg: 420 }}>
                                 I&apos;m Jihan, {text}
-                            </Text>
+                            </Title>
                             <Text mt={'lg'} w={{ base: 300, lg: 420 }}>
                                 Design all your distinctive advertising materials ,
                                 and create your interfaces for your application or website and build its UX research.
