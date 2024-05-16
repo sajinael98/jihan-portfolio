@@ -1,9 +1,9 @@
-import React, { PropsWithChildren } from 'react'
-import { SectionProps } from './Section.interface'
-import { Box, Center, Divider, Stack, Text } from '@mantine/core'
+import { Box, Center, Divider, Stack } from '@mantine/core'
+import { PropsWithChildren } from 'react'
 import Dots from '../Dots'
-import Title from '../Title'
 import SpacedText from '../SpacedText'
+import Title from '../Title'
+import { SectionProps } from './Section.interface'
 
 const Section = ({ children, title, subtitle }: PropsWithChildren<SectionProps>) => {
     return (
@@ -20,7 +20,7 @@ const Section = ({ children, title, subtitle }: PropsWithChildren<SectionProps>)
                         <Dots />
                     </Center>
                 </Stack>}
-                <Box>
+                <Box py='md'>
                     {children}
                 </Box>
             </Stack>

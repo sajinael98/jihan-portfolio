@@ -20,8 +20,6 @@ export const links = [
     }
 ] as const
 
-export const certifications = ['/certified/gaza.svg', '/certified/KA.png', '/certified/ixdf.png',] as const
-
 const description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.'
 export const services: Service[] = [
     {

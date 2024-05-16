@@ -1,14 +1,41 @@
-import { Box, Flex, Grid, SimpleGrid } from '@mantine/core'
-import React from 'react'
-import { certifications } from '../../../constants'
+import { Grid } from '@mantine/core'
 import Image from 'next/image'
 
 const Certifications = () => {
     return (
         <Grid justify='center' align='center'>
-            {certifications.map((c, index) => <Grid.Col  h={c === '/certified/ixdf.png' ? 100 : 150} span={{ lg: 3, base: 6 }} key={index} pos={'relative'} >
-                <Image objectFit='contain' src={c} alt='certificate' fill priority style={{ mixBlendMode: c === '/certified/ixdf.png' ? 'normal' : 'exclusion' }} />
-            </Grid.Col>)}
+            <Grid.Col
+                order={{
+                    base: 1,
+                    lg: 1
+                }}
+                h={125}
+                span={{ lg: 3, base: 6 }}
+                pos={'relative'}>
+                <Image objectFit='contain' src={"/certified/GSG.png"} alt='certificate' fill priority style={{ mixBlendMode: 'exclusion' }} />
+            </Grid.Col>
+
+            <Grid.Col
+                order={{
+                    base: 3,
+                    lg: 2
+                }}
+                h={125}
+                span={{ lg: 3, base: 6 }}
+                pos={'relative'}>
+                <Image objectFit='contain' src={"/certified/ixdf.png"} alt='certificate' fill priority style={{ mixBlendMode: 'normal' }} />
+            </Grid.Col>
+
+            <Grid.Col
+                order={{
+                    base: 2,
+                    lg: 3
+                }}
+                h={125}
+                span={{ lg: 3, base: 6 }}
+                pos={'relative'}>
+                <Image objectFit='contain' src={"/certified/KA.png"} alt='certificate' fill priority style={{ mixBlendMode: 'exclusion' }} />
+            </Grid.Col>
         </Grid>
     )
 }
