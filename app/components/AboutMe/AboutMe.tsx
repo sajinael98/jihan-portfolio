@@ -3,6 +3,7 @@ import React from 'react'
 import Dots from '../Dots'
 import NImage from 'next/image'
 import Title from '../Title'
+import SpacedText from '../SpacedText'
 
 const AboutMe = () => {
     return (
@@ -24,7 +25,7 @@ const AboutMe = () => {
             }}
         >
             <Stack flex={1} gap={0}>
-                <Text style={{ letterSpacing: 3, fontWeight: 600, textTransform: 'uppercase' }}>about me</Text>
+                <SpacedText>about me</SpacedText>
                 <Title>
                     Design your ideas
                 </Title>

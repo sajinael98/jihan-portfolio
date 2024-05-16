@@ -7,6 +7,7 @@ import { useDisclosure } from '@mantine/hooks'
 import { useTypewriter } from 'react-simple-typewriter'
 import PrimaryButton from '../PrimaryButton'
 import Title from '../Title'
+import SpacedText from '../SpacedText'
 
 const PADDING_INLINE = { base: 'calc(var(--mantine-spacing-sm) * 1.5)', lg: 'calc(var(--mantine-spacing-md) * 10)' }
 
@@ -62,7 +63,7 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
                     </Group>
                     <Flex flex={1} direction={{ base: 'column-reverse', lg: 'row' }} gap={'md'}>
                         <Flex direction={'column'} justify={{ lg: 'center' }} flex={{ base: 2, lg: 1 }} gap={0} >
-                            <Text style={{ letterSpacing: 3, fontWeight: 600, textTransform: 'uppercase' }}>Brining Idea to life</Text>
+                            <SpacedText>Brining Idea to life</SpacedText>
                             <Text
                                 fz={'calc(var(--mantine-font-size-md) * 3)'}
                                 variant="gradient"

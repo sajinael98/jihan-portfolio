@@ -4,6 +4,7 @@ import PrimaryButton from '../../../../components/PrimaryButton'
 import Image from 'next/image'
 import Dots from '../../../../components/Dots'
 import Title from '../../../../components/Title'
+import SpacedText from '../../../../components/SpacedText'
 
 const Contact = () => {
   return (
@@ -19,12 +20,9 @@ const Contact = () => {
         <Image src='/dots.svg' alt="contact" width={100} height={50} priority />
       </Flex>
       <Stack gap={0} justify='center'>
-        <Text
-          style={{ letterSpacing: 3, fontWeight: 600, textTransform: 'uppercase', lineHeight: 1.5 }}
-          fz={{ base: 'calc(var(--mantine-font-size-sm) * 1.25)', lg: 'calc(var(--mantine-font-size-md) * 1.5)' }}
-        >
+        <SpacedText>
           How I do it ?
-        </Text>
+        </SpacedText>
         <Title
           w={{ base: 250, lg: 420 }}>
           Get In Touch

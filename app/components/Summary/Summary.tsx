@@ -3,6 +3,7 @@ import React from 'react'
 import Dots from '../Dots'
 import NImage from 'next/image'
 import Title from '../Title'
+import SpacedText from '../SpacedText'
 
 const Summary = () => {
   return (
@@ -13,12 +14,9 @@ const Summary = () => {
         </Box>
       </Flex>
       <Stack flex={1}>
-        <Text
-          style={{ letterSpacing: 3, fontWeight: 600, textTransform: 'uppercase', lineHeight: 1.5 }}
-          fz={{ base: 'calc(var(--mantine-font-size-sm) * 1.25)', lg: 'calc(var(--mantine-font-size-md) * 1.5)' }}
-        >
+        <SpacedText>
           How I do it ?
-        </Text>
+        </SpacedText>
         <Title> Bringing Idea to
           <Text inherit>life</Text>
         </Title>

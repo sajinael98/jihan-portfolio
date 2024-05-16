@@ -3,20 +3,18 @@ import { SectionProps } from './Section.interface'
 import { Box, Center, Divider, Stack, Text } from '@mantine/core'
 import Dots from '../Dots'
 import Title from '../Title'
+import SpacedText from '../SpacedText'
 
 const Section = ({ children, title, subtitle }: PropsWithChildren<SectionProps>) => {
     return (
         <>
             <Stack>
                 {(title || subtitle) && <Stack gap={0}>
-                    {title && <Text
+                    {title && <SpacedText
                         ta='center'
-                        style={{ letterSpacing: 3, fontWeight: 600, textTransform: 'uppercase', lineHeight: 1.5 }}
-                        fz={{ base: 'calc(var(--mantine-font-size-sm) * 1.25)', lg: 'calc(var(--mantine-font-size-md) * 1.5)' }}
-
                     >
                         {title}
-                    </Text>}
+                    </SpacedText>}
                     {subtitle && <Title ta='center'>{subtitle}</Title>}
                     <Center mt='md'>
                         <Dots />
