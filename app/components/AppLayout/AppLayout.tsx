@@ -18,6 +18,7 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
         typeSpeed: 50,
         loop: Infinity,
     })
+
     return (
         <AppShell
             header={{
