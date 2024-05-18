@@ -4,6 +4,7 @@ import { generateColors } from '@mantine/colors-generator';
 import { AppShell, Button, Text, createTheme } from "@mantine/core";
 
 export const theme = createTheme({
+  fontFamily: "Epilogue, sans-serif",
   primaryColor: 'text-color',
   primaryShade: 9,
   colors: {
@@ -14,7 +15,7 @@ export const theme = createTheme({
     AppShell: AppShell.extend({
       defaultProps: {
         bg: '#FFF7E9',
-        c:'text-color'
+        c: 'text-color'
       }
     }),
     Text: Text.extend({
@@ -29,7 +30,7 @@ export const theme = createTheme({
         w: 132,
         h: 48,
         radius: 12,
-        fw:700,
+        fw: 700,
         fz: 'md'
       }
     })

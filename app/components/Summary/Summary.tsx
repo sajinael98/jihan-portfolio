@@ -18,7 +18,7 @@ const Summary = () => {
           How I do it ?
         </SpacedText>
         <Title> Bringing Idea to
-          <Text inherit>life</Text>
+          <br/>life
         </Title>
         <Dots />
 

@@ -1,13 +1,13 @@
 "use client"
-import { AppShell, Box, Burger, Button, Flex, Group, Image as MantineImage, Stack, Text } from '@mantine/core'
+import { AppShell, Box, Burger, Flex, Group, Space, Stack, Text } from '@mantine/core'
+import { useDisclosure } from '@mantine/hooks'
 import Image from 'next/image'
 import React from 'react'
-import { links } from '../../../constants'
-import { useDisclosure } from '@mantine/hooks'
 import { useTypewriter } from 'react-simple-typewriter'
+import { links } from '../../../constants'
 import PrimaryButton from '../PrimaryButton'
-import Title from '../Title'
 import SpacedText from '../SpacedText'
+import Title from '../Title'
 
 const PADDING_INLINE = { base: 'calc(var(--mantine-spacing-sm) * 1.5)', lg: 'calc(var(--mantine-spacing-md) * 10)' }
 
@@ -24,6 +24,7 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
             header={{
                 height: { base: '120vh', lg: '100vh' }
             }}
+
         >
             <AppShell.Header
                 px={PADDING_INLINE}
@@ -74,7 +75,7 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
                             </Text>
                             <Title
                                 h={{ base: 80, lg: 130 }}
-                                w={{ base: 250, lg: 420 }}>
+                                w={{ base: 250, lg: 500 }}>
                                 I&apos;m Jihan, {text}
                             </Title>
                             <Text mt={'lg'} w={{ base: 300, lg: 420 }}>
@@ -88,7 +89,7 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
                                 <Image src='/arrow.svg' alt="hero image" width={120} height={100} priority />
                             </Group>
                         </Flex>
-                        <Flex flex={{ base: 0, lg: 1 }} h={{base: 300, lg: '100%'}} pos='relative'>
+                        <Flex flex={{ base: 0, lg: 1 }} h={{ base: 300, lg: '100%' }} pos='relative'>
                             <Image src='/heroPic(svg).svg' alt="hero image" fill priority />
                         </Flex>
                     </Flex>
@@ -97,6 +98,26 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
             <AppShell.Main px={PADDING_INLINE}>
                 {children}
             </AppShell.Main>
+            <AppShell.Footer pb='md' px={PADDING_INLINE} bg='#FFF7E9' pos='static' withBorder={false}>
+                <Flex mb='md' justify='space-between' direction={{base: 'column', lg: 'row'}} gap='md'>
+                    <Stack align='center'>
+                        <Box pos='relative' w={{ base: 80, lg: 100 }} h={50}>
+                            <Image src='/Logo.svg' alt="jihan's logo" fill priority />
+                        </Box>
+                        
+                        <Text>Bring ideas to life</Text>
+                    </Stack>
+                    <Stack align='center'>
+                        <Text ta='center' fw={700} fz='lg'>Find me on</Text>
+                        <Group>
+                            <Image src='/social/Linkedin.png' width={50} height={50} alt='linked in' />
+                            <Image src='/social/Instagram.png' width={50} height={50} alt='linked in' />
+                            <Image src='/social/Behance.png' width={50} height={50} alt='linked in' />
+                        </Group>
+                    </Stack>
+                </Flex>
+                <Text ta='center'>All rights reserved {new Date().getFullYear()}.</Text>
+            </AppShell.Footer>
         </AppShell>
     )
 }
