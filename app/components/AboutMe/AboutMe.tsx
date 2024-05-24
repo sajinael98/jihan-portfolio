@@ -8,6 +8,7 @@ import SpacedText from '../SpacedText'
 const AboutMe = () => {
     return (
         <Flex
+           
             gap={{ base: 'md' }}
             direction={{ base: 'column-reverse', lg: 'row' }}
             style={{

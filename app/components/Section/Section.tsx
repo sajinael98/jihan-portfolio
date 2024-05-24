@@ -5,9 +5,9 @@ import SpacedText from '../SpacedText'
 import Title from '../Title'
 import { SectionProps } from './Section.interface'
 
-const Section = ({ children, title, subtitle }: PropsWithChildren<SectionProps>) => {
+const Section = ({ children, title, subtitle, id }: PropsWithChildren<SectionProps>) => {
     return (
-        <Container size={'lg'} my='calc(var(--mantine-spacing-md) * 4)' px={{ base: 'xl', lg: 0 }}>
+        <Container id={id} size={'lg'} my='calc(var(--mantine-spacing-md) * 4)' px={{ base: 'xl', lg: 0 }}>
             <Stack>
                 {(title || subtitle) && <Stack gap={0}>
                     {title && <SpacedText

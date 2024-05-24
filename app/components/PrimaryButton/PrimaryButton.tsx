@@ -4,10 +4,11 @@ import { Button, ButtonProps, useProps } from '@mantine/core';
 
 interface PrimaryButtonProps extends ButtonProps {
     children?: React.ReactNode;
+    onClick?: () => void
 }
 
 const defaultProps: Partial<PrimaryButtonProps> = {
-    
+
 };
 
 

@@ -39,7 +39,7 @@ const ProjectsList = () => {
     const options = ['all', 'Web UI', 'Mobile UI', 'Social Media ADs', 'Logo & Branding']
 
     return (
-        <Tabs defaultValue='all' keepMounted={false} variant='default'>
+        <Tabs defaultValue='all' keepMounted={false} variant='default' >
             <Tabs.List justify="space-between" mb='calc(var(--mantine-spacing-md) * 2)'>
                 {options.map((opt) => <Tabs.Tab key={opt} tt='capitalize' onClick={() => setOption(opt)} value={opt} style={{ opacity: option === opt ? 1 : 0.25 }}>
                     {opt}

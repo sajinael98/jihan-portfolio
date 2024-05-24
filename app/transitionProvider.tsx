@@ -7,13 +7,15 @@ import { PropsWithChildren, useEffect } from 'react'
 
 const TransitionProvider = ({ children }: PropsWithChildren) => {
     const [scope, animate] = useAnimate()
-    
+
     async function handleAnimate() {
         await animate('#loading', {
             height: 0,
-            opacity: 0
+            opacity: 0,
         }, { delay: 2, duration: 0.25 })
-
+        await animate('#loading', {
+            y:'-100vh'
+        })
     }
 
     useEffect(() => {
@@ -37,13 +39,13 @@ const TransitionProvider = ({ children }: PropsWithChildren) => {
                 }} >
 
                 <Box pos='relative' mx='md' w={500} h={300} >
-                    <Image onAnimationEnd={()=>{
+                    <Image onAnimationEnd={() => {
                         alert(2)
                     }} src={image} alt='logo' fill priority objectFit='contain' />
                 </Box>
             </Box>
 
-            {children}
+            <>{children}</>
         </Box >
     )
 }

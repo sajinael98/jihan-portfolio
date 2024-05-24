@@ -11,16 +11,16 @@ import { ServicesList } from './modules/services/presentation';
 export default function HomePage() {
   return (
     <>
-      <Section title='Certified by' subtitle='Credentials and Achievements'>
+      <Section title='Certified by' subtitle='Credentials and Achievements' id='journey'>
         <Certifications />
       </Section>
-      <Section>
+      <Section  id='about-me'>
         <AboutMe />
       </Section>
-      <Section title='Services' subtitle='How I can help ?'>
+      <Section title='Services' subtitle='How I can help ?' id='services'>
         <ServicesList />
       </Section>
-      <Section title='Projects' subtitle='A look at portfolio'>
+      <Section title='Projects' subtitle='A look at portfolio' id='projects'>
         <ProjectsList />
       </Section>
       <Section>
