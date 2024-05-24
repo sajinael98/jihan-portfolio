@@ -10,13 +10,13 @@ import { ServicesList } from './modules/services/presentation';
 
 export default function HomePage() {
   return (
-    <Stack gap={'calc(var(--mantine-spacing-md) * 4)'} py={'calc(var(--mantine-spacing-md) * 2)'}>
+    <>
       <Section title='Certified by' subtitle='Credentials and Achievements'>
         <Certifications />
       </Section>
-      <Box>
+      <Section>
         <AboutMe />
-      </Box>
+      </Section>
       <Section title='Services' subtitle='How I can help ?'>
         <ServicesList />
       </Section>
@@ -29,6 +29,6 @@ export default function HomePage() {
       <Section>
         <Contact />
       </Section>
-    </Stack>
+    </>
   );
 }

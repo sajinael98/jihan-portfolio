@@ -9,6 +9,7 @@ import SpacedText from '../../../../components/SpacedText'
 const Contact = () => {
   return (
     <Flex
+    
       pos='relative'
       bg='#F8E3BA'
       direction={{ base: 'column-reverse', lg: 'row' }}
