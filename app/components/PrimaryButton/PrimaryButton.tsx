@@ -1,25 +1,18 @@
-import React from 'react';
-
+import React, { PropsWithChildren } from 'react'
+import { forwardRef } from 'react';
 import { Button, ButtonProps, useProps } from '@mantine/core';
 
-interface PrimaryButtonProps extends ButtonProps {
-    children?: React.ReactNode;
-    onClick?: () => void
-}
+interface PrimaryButtonProps
+    extends ButtonProps,
+    Omit<React.ComponentPropsWithoutRef<'button'>, keyof ButtonProps> {}
 
-const defaultProps: Partial<PrimaryButtonProps> = {
+const defaultProps: Partial<PrimaryButtonProps> = {};
 
-};
+const PrimaryButton = forwardRef<HTMLButtonElement, PropsWithChildren<PrimaryButtonProps>>((props, ref) => {
+    const buttonProps = useProps('PrimaryButton', defaultProps, props);
+    return <Button {...buttonProps}  ref={ref} />
+});
 
-
-const PrimaryButton = (props: PrimaryButtonProps) => {
-    const { children, ...buttonProps } = useProps('PrimaryButton', defaultProps, props);
-
-    return (
-        <Button  {...buttonProps} >
-            {children}
-        </Button>
-    )
-}
+PrimaryButton.displayName = 'PrimaryButton'
 
 export default PrimaryButton

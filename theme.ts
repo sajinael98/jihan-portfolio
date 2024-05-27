@@ -1,7 +1,7 @@
 "use client";
 import { generateColors } from '@mantine/colors-generator';
 
-import { AppShell, Button, Text, createTheme } from "@mantine/core";
+import { AppShell, Button, Text, Title, createTheme } from "@mantine/core";
 
 export const theme = createTheme({
   fontFamily: "Epilogue, sans-serif",
@@ -32,6 +32,27 @@ export const theme = createTheme({
         radius: 12,
         fw: 700,
         fz: 'md'
+      }
+    }),
+    SpacedText: Text.extend({
+      defaultProps: {
+        fz: {
+          base: 'calc(var(--mantine-font-size-sm) * 1.25)',
+          lg: 'calc(var(--mantine-font-size-md) * 1.5)'
+        },
+        fw: 600,
+        tt: 'uppercase',
+        lts: 3
+      }
+    }),
+    CustomTitle: Text.extend({
+      defaultProps: {
+        fz: {
+          base: 'calc(var(--mantine-font-size-sm) * 2)',
+          lg: 'calc(var(--mantine-font-size-md) * 3)'
+        },
+        fw: 700,
+        lts: 1.5,
       }
     })
   }

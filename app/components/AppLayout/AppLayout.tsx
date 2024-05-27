@@ -75,8 +75,8 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
                                 and create your interfaces for your application or website and build its UX research.
                             </Text>
                             <Group >
-                                <PrimaryButton >
-                                    Discoiver
+                                <PrimaryButton>
+                                    Discover
                                 </PrimaryButton>
                                 <Image src='/arrow.svg' alt="hero image" width={120} height={100} priority />
                             </Group>
@@ -103,9 +103,9 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
                         <Stack align='center'>
                             <Text ta='center' fw={700} fz='lg'>Find me on</Text>
                             <Group>
-                                <Image src='/social/Linkedin.png' width={50} height={50} alt='linked in' />
-                                <Image src='/social/Instagram.png' width={50} height={50} alt='linked in' />
-                                <Image src='/social/Behance.png' width={50} height={50} alt='linked in' />
+                                <Image src='/social/Linkedin.png'  width={38} height={38} alt='Linkedin' />
+                                <Image src='/social/Instagram.png'  width={50} height={50} alt='Instagram' />
+                                <Image src='/social/Behance.png'  width={50} height={50} alt='Behance' />
                             </Group>
                         </Stack>
                     </Flex>

@@ -1,15 +1,17 @@
-import React, { PropsWithChildren } from 'react'
-import { SpacedTextProps } from './SpacedText.interface'
-import { Text } from '@mantine/core'
+import React, { PropsWithChildren, forwardRef } from 'react'
+import { Text, TextProps, useProps } from '@mantine/core'
 
-const SpacedText = ({ children, ...props }: PropsWithChildren<SpacedTextProps>) => {
-    return (
-        <Text
-            style={{ letterSpacing: 3, fontWeight: 600, textTransform: 'uppercase' }}
-            fz={{ base: 'calc(var(--mantine-font-size-sm) * 1.25)', lg: 'calc(var(--mantine-font-size-md) * 1.5)' }}
-            {...props}>{children}
-        </Text>
-    )
-}
+interface SpacedTextProps
+    extends TextProps,
+    Omit<React.ComponentPropsWithoutRef<'p'>, keyof TextProps> { }
+
+const defaultProps: Partial<SpacedTextProps> = {};
+
+const SpacedText = forwardRef<HTMLParagraphElement, PropsWithChildren<SpacedTextProps>>((props, ref) => {
+    const textProps = useProps('SpacedText', defaultProps, props);
+    return <Text {...textProps} ref={ref} />
+});
+
+SpacedText.displayName = 'SpacedText'
 
 export default SpacedText

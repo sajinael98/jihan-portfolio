@@ -1,22 +1,17 @@
-import { Text } from '@mantine/core'
-import React from 'react'
-import { TitleProps } from './Title.interface'
+import React, { PropsWithChildren, forwardRef } from 'react'
+import { Text, TextProps, useProps } from '@mantine/core'
 
-const Title = ({ children, ...props }: React.PropsWithChildren<TitleProps>) => {
-    return (
-        <Text
-            fw={700}
-            fz={{
-                base: 'calc(var(--mantine-font-size-sm) * 2)',
-                lg: 'calc(var(--mantine-font-size-md) * 3)'
-            }}
-            style={{ lineHeight: 1.5 }}
+interface TitleProps
+    extends TextProps,
+    Omit<React.ComponentPropsWithoutRef<'p'>, keyof TextProps> { }
 
-            {...props}
-        >
-            {children}
-        </Text>
-    )
-}
+const defaultProps: Partial<TitleProps> = {};
+
+const Title = forwardRef<HTMLParagraphElement, PropsWithChildren<TitleProps>>((props, ref) => {
+    const textProps = useProps('CustomTitle', defaultProps, props);
+    return <Text {...textProps} ref={ref} />
+});
+
+Title.displayName = 'Title'
 
 export default Title
